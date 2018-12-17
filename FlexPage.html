@@ -1,0 +1,51 @@
+<html>
+    <head><title>Flex Tutorial - Paper</title> 
+    <style type="text/css">
+    body
+    {
+        background-color: #ddd;
+        margin: 0;
+    }
+    .paper
+    {
+        background-color: white;
+        padding: 2em;
+        /* <!--x axis, y axis, blur , color--> */
+        box-shadow: 10px 10px 20px grey;
+    }
+    .flex{
+        display: flex;
+        flex-direction: column;
+        /* vh is the special height measurement - Viewport Height - height of the class mentioned-container will be expanded
+        if no height: div content will occupy how much it is needed
+        if height :div content will occupy  how much it is needed, But Height may vary accordingly */
+        height: 100vh;
+        }
+    .flex > section
+    {
+        flex-grow: 1;
+    }
+    header.paper
+    {
+        background-color:#6F73D2;
+    }
+    nav.paper
+    {
+        background-color:#83C9F4;
+    }
+    footer.paper
+    {
+        background-color:#7681B3;
+    }
+    </style>
+    </head>
+    <body>
+        <div class="flex">
+        <header class="paper"><h1>This is a Header</h1></Header>
+        <nav class="paper"> This is a Navigation Page</nav>
+        <!-- everything will be static except content section-> content section is the child of flex class . so (>) is used-->
+        <section><h2>This is a content Section</h2></section>
+        <footer class="paper">This is a footer</footer>
+        </div>
+    </body>
+</html>
